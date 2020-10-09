@@ -1,5 +1,8 @@
-### Build Status
+### Build Status - main
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ede0d9e6-26f6-424a-b789-059f64074c63/deploy-status)](https://app.netlify.com/sites/dunderdog/deploys)
+
+### Build Status - test
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e953628-768d-4935-a627-dc8821d51218/deploy-status)](https://app.netlify.com/sites/dunderdogtest/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
