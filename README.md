@@ -11,6 +11,31 @@ https://test.dunderdog.net
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Follow below steps to run the app in your machine
+
+`git clone https://github.com/Dunderdog/dunderdog.git`
+<br/>
+`cd dunderdog`
+<br/>
+`npm install`
+<br/>
+`npm run build`
+<br/>
+`serve -s build`
+<br/>
+After this you will be able to access the app at http://localhost:5000
+
+### Branches
+This repository has 3 important branches
+1. **main** - Use this for production
+2. **test** - Use this for test enviroment
+3. **local** - use this for executing in your machine
+
+Once the changes are verified in `local` merge your code to `test` branch and verify the changes and then finally merge to `main`
+
+Feel free to create new branches for bug fixes, hot fixes and new feature releases.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
