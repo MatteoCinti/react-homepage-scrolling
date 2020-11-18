@@ -1,23 +1,17 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+
+import HomePage from './pages/homepage/homepage.component'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <body>
-      <div class="container">
-          <h1>Alright world time to take you on!</h1>
-        <div class="loader"></div>
-        <p>Welcome to Dunderdog</p>
-        <br/>
-        <p>Our new site will launch very soon</p>
-        <p>Check back here later</p>
-        <br/>
-        <a href="https://dunderdog.se">dunderdog.se</a>
-      </div>
-      </body>
-      </header>
+      <Routes>
+        <Route exact path='/' element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
