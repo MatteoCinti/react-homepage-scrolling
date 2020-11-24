@@ -1,0 +1,5 @@
+export { default as HomeContactPage } from './homepage-contact/homepage-contact.component' 
+export { default as HomeAboutUsPage } from './homepage-about-us/homepage-about-us.component' 
+export { default as HomeLandingPage } from './homepage-landing/homepage-landing.component' 
+export { default as HomeProcessPage } from './homepage-process/homepage-process.component' 
+export { default as HomeProjectsPage } from './homepage-projects/homepage-projects.component' 
