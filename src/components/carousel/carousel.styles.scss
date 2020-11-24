@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Roboto';
+  background: #272727;
+  display: flex; // To center the carousel vertically in the viewport
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.carousel .carousel-item .img{
+  border-radius: 4px;
+
+}
