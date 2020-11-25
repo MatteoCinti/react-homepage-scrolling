@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react'
+
 const handleScroll = (e, up, down, navigate) => {
     if (e.deltaY < 0) {
         console.log('scrolling up');
@@ -26,5 +28,26 @@ const handleArrowScroll = (e, up, down, navigate) => {
     }
 }
 
+const HandleHomepageRouting = (up, down, navigate, page) => {
+            useEffect( () => {
+            // window.addEventListener('wheel', e => {
+            //     handleScroll(e, up, down, navigate)
+            // })
+            window.addEventListener('keydown', e => {
+                console.log(`mounted ${page}`)
+                handleArrowScroll(e, up, down, navigate)
+            }, false)
+            return () => {
+                // window.removeEventListener('wheel', e => {
+                //     handleScroll(e, up, down, navigate)
+                // })
+                console.log(`unmounted ${page}`)
+                window.removeEventListener('keydown', e => {
+                    handleArrowScroll(e, up, down, navigate)
+                })
+            }
+        }, []) 
+}
 
-export { handleScroll, handleArrowScroll }
+
+export { handleScroll, handleArrowScroll, HandleHomepageRouting }
