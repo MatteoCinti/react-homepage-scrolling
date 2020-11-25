@@ -22,12 +22,13 @@ const HomepageContact = ({url}) => {
                 handleArrowScroll(e, up, down, navigate)
             })
         }
-    }, [] )
+    }, [] ) 
 
     return (
         <div className="homepage-contact"
             onWheel={e => handleScroll(e, up, down, navigate)}
-            // onKeyDown={e => handleArrowScroll(e, up, down, navigate)}
+            // onKeyUp={e => handleArrowScroll(e, up, down, navigate)}
+            // tabIndex={0}
         >
             <h1>Contact Page</h1>
         </div>    

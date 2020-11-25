@@ -22,14 +22,15 @@ const LandingPage = ({url}) =>{
                 handleArrowScroll(e, up, down, navigate)
             })
         }
-    }, [] )  
+    }, [] ) 
 
     
 
     return (
         <div className="homepage-landing"
             onWheel={e => handleScroll(e, up, down, navigate)}
-            // onKeyPress={e => handleArrowScroll(e, up, down, navigate)}
+            // onKeyUp={e => handleArrowScroll(e, up, down, navigate)}
+            // tabIndex={0}
         >
             <h1>Landing Page</h1>
         </div>    
