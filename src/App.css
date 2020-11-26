@@ -22,7 +22,7 @@ p {
 a {
   font-size: 15px;
   opacity: 0;
-  animation: appear 2s 4s forwards;
+  animation: appear 0s 0s forwards;
 }
 
 .container{
