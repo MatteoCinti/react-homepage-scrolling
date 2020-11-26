@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 
 import { HomeContactPage, HomeAboutUsPage, HomeLandingPage, HomeProcessPage, HomeProjectsPage } from './'
-import routingData from './routing-data'
+import routingData from '../../utilities/routing-data'
 
 import './homepage.styles.scss'
 

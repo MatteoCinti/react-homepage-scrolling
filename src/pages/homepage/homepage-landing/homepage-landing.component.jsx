@@ -1,25 +1,25 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import { handleScroll, HandleHomepageRouting } from '../handleScroll-function'
 
-const LandingPage = ({url}) =>{
+const LandingPage = ({ url }) => {
     const navigate = useNavigate();
-    const {up, down} = url
+    const { up, down } = url
 
     HandleHomepageRouting(up, down, navigate, 'landing');
-    
+
 
     return (
         <div className="homepage-landing"
             onWheel={e => handleScroll(e, up, down, navigate)}
-            // onKeyUp={e => handleArrowScroll(e, up, down, navigate)}
-            // tabIndex={0}
+        // onKeyUp={e => handleArrowScroll(e, up, down, navigate)}
+        // tabIndex={0}
         >
             <h1>Landing Page</h1>
-        </div>    
+        </div>
     )
 }
 
 
-export default  LandingPage
+export default LandingPage
