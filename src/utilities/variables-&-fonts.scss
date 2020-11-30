@@ -1,0 +1,33 @@
+/* 
+  ---INDEX 
+    1. Font Imports
+    2. Colours
+*/
+
+
+
+/*  ====================
+      1. Font Imports
+    ====================*/
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+  font-style: normal;
+}   
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf');
+  font-style: italic, oblique;
+}
+
+/*  ==============
+      2. Colours
+    ==============*/
+
+:root{
+  --color-black: #000000;
+  --color-black-shade: #14161A; 
+  --color-text-pink: #FFF7ED;
+}
