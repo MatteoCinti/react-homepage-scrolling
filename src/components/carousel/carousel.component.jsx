@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./carousel.styles.scss";
 
 import "materialize-css/dist/css/materialize.min.css";
@@ -11,22 +11,32 @@ import img3 from "./img/BOB_0061.JPG";
 import img4 from "./img/BOB_0127.JPG";
 import img5 from "./img/BOB_0078.JPG";
 import img6 from "./img/BOB_0247.JPG";
+import subtile1 from "./img/Ideas.png";
+import subtitle2 from "./img/Experiences.png";
 
 function MyCarousel() {
+  var trigger = true;
+
+  const subtitleRef = useRef(null);
+
   useEffect(() => {
     var elems = document.querySelectorAll(".carousel");
     var instances = M.Carousel.init(elems, {
-      fullWidth: false,
       numVisible: 5,
-      dist: -100,
     });
 
-    // var instance = M.Carousel.getInstance(elems[0]);
-    // setInterval(() => {
-    //   instance.next();
-    // }, 4000);
-    // console.log(elems);
-    // console.log(instances);
+    var instance = M.Carousel.getInstance(elems[0]);
+    let autoplay = setInterval(() => {
+      instance.next();
+      trigger = !trigger;
+      let subtitleImg = trigger ? subtile1 : subtitle2;
+      subtitleRef.current.src = subtitleImg;
+    }, 4000);
+
+    return () => {
+      clearInterval(autoplay);
+      instance.destroy();
+    };
   });
 
   return (
@@ -67,6 +77,9 @@ function MyCarousel() {
             <img className="carousel-img" src={img6} alt="" />
           </a>
         </div>
+      </div>
+      <div>
+        <img ref={subtitleRef} src={subtile1} alt="" />
       </div>
     </div>
   );

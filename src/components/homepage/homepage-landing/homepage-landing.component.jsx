@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import MyCarousel from "../../carousel/carousel.component";
 
 const HomepageLanding = ({ url }) => (
-    <React.Fragment>
-        <h1>Landing Page</h1>
-    </React.Fragment>
-)
+  <React.Fragment>
+    <MyCarousel />
+  </React.Fragment>
+);
 
-export default HomepageLanding
+export default HomepageLanding;
