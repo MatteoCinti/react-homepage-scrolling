@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-import { handleScroll, handleArrowScroll, HandleHomepageRouting } from '../../../utilities/handleScroll-function'
+import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
 
 

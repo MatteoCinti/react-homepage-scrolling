@@ -1,0 +1,25 @@
+/* 
+  ---INDEX 
+    2. Font Styles
+*/
+
+/*  ================
+      Fonts Styles
+    ================*/
+
+body {
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  margin: 0;
+  color: white;
+
+  background-color: var(--color-black);
+
+  *{
+    font-weight: 400;
+  }
+
+  h1{
+    margin: 0;
+  }
+}

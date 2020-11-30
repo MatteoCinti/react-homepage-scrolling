@@ -15,7 +15,7 @@ const HomePage = () => (
                 exact path='/' 
                 element={
                     <HomepageFrame url={routingData.landingPageUrls} section='landing'>
-                        <HomepageLanding/>
+                        <HomepageLanding />
                     </HomepageFrame>
                 } 
             />
