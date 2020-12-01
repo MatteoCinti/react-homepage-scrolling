@@ -20,7 +20,7 @@ function MyCarousel() {
   useEffect(() => {
     var trigger = true;
     var elems = document.querySelectorAll(".carousel");
-    var instances = M.Carousel.init(elems, {
+    M.Carousel.init(elems, {
       numVisible: 5,
     });
 
