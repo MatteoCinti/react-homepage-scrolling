@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./carousel.styles.scss";
 
 import "materialize-css/dist/css/materialize.min.css";
@@ -15,11 +15,10 @@ import subtile1 from "./img/Ideas.png";
 import subtitle2 from "./img/Experiences.png";
 
 function MyCarousel() {
-  var trigger = true;
-
   const subtitleRef = useRef(null);
 
   useEffect(() => {
+    var trigger = true;
     var elems = document.querySelectorAll(".carousel");
     var instances = M.Carousel.init(elems, {
       numVisible: 5,
