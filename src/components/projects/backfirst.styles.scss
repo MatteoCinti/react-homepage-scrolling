@@ -1,0 +1,15 @@
+.projects-back-first{
+    position: relative;
+    background-image: url(./image/woman.png);
+    background-size: contain;
+    background-repeat: round;
+    height: 100%;
+    cursor: pointer;
+    animation: enterBackImage 0.3s ease normal;
+}
+@keyframes enterBackImage {
+    from {left: -100%;}
+    to {left: 0%;}
+  }
+
+ 
