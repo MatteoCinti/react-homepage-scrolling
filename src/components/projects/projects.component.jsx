@@ -75,7 +75,7 @@ function Projects() {
         >
           <img src={icon2} alt="" className="project-icon" />
         </div>
-        <a href="#https://test.dunderdog.net/home/process">
+        <a href="https://test.dunderdog.net/home/process">
           <div ref={thirdRef} className="box-item">
             <img src={icon3} alt="" className="project-icon" />
           </div>
