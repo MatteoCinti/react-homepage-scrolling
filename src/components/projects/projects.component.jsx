@@ -75,17 +75,17 @@ function Projects() {
         >
           <img src={icon2} alt="" className="project-icon" />
         </div>
-        <a href="https://test.dunderdog.net/home/process">
-          <div ref={thirdRef} className="box-item">
-            <img src={icon3} alt="" className="project-icon" />
-          </div>
-        </a>
+        {/* <a href="#"> */}
+        <div ref={thirdRef} className="box-item">
+          <img src={icon3} alt="" className="project-icon" />
+        </div>
+        {/* </a> */}
       </div>
       <div ref={subtitleRef} className="subtitle">
-        <a href="https://test.dunderdog.net/home/about-us">
-          Know more
-          <img src={underline} alt=""></img>
-        </a>
+        {/* <a href="#"> */}
+        Know more
+        <img src={underline} alt=""></img>
+        {/* </a> */}
       </div>
     </div>
   );
