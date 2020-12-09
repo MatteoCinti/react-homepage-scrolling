@@ -1,39 +1,38 @@
 .page-on-click{
-    .container-fluid{
-        .row{
-            margin-left: 100px;
-            .texts-wrapper{
-                margin: auto;
-                .text-onclick1{
-                    font-size: 40px;
-                    font-weight: bolder;
-                    color: #FFF7ED;
-                } 
-                .text-onclick2{
-                    font-size: 16px;
-                    color: #FFF7EDCC;
+    .wrapper-whole{
+        display: flex;
+        margin-left: 100px;
+        .texts-wrapper{
+            width: 30%;
+            margin: auto;
+            .text-onclick1{
+                font-size: 40px;
+                font-weight: bolder;
+                color: #FFF7ED;
+            } 
+            .text-onclick2{
+                font-size: 16px;
+                color: #FFF7EDCC;
 
-                }
-                .text-onclick3{
-                    font-size: 16px;
-                    color: #EEBECE;
-
-                }
             }
-            .col-sm-1{
-                margin: auto;
-                img{
-                    animation: vistapp-icon 3s ease-in-out 0.5s infinite alternate;
-                }
-            }
-            .col-sm-5{
-                margin: auto;
-                img{
-                    animation: mobile-pic 3s ease-in-out 0.5s infinite alternate;
-                }
+            .text-onclick3{
+                font-size: 16px;
+                color: #EEBECE;
             }
         }
-    } 
+        .vist-icon{
+            margin: auto;
+            img{
+                animation: vistapp-icon 3s ease-in-out 0.5s infinite alternate;
+            }
+        }
+        .mobile-image{
+            margin: auto;
+            img{
+                animation: mobile-pic 3s ease-in-out 0.5s infinite alternate;
+            }
+        }
+    }
 }
 
 
