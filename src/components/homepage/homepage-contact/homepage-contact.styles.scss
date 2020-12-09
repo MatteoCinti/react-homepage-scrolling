@@ -2,49 +2,166 @@
   ---INDEX
     1. Page Layout 
     2. Font Styles
+    3. Animations
 */
+
 /*  ====================
-      1. Page Layout
-    ====================*/
+    1. Page Layout
+  ====================*/
+  $baseline: 22px;
 
-.half-background{
-  height: 50vh;  
-  background-color: var(--color-black-shade);
+  .top-half-background{
+    height: 47vh; 
+    width: 100vw; 
+    background-color: var(--color-black-shade);
+    position: relative;
+    overflow: hidden;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+
+    .sliding-text{
+      height: 50%; 
+      width: 100%; 
+      margin: auto; 
+      position: absolute; 
+      top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
+      line-height: 12rem;
+     
+    }
+    .sliding-text-start{
+      -webkit-animation: example1 15s linear forwards;
+      -moz-animation: example1 15s linear forwards;
+      animation: example1 15s linear forwards;
+    }
+  
+    .sliding-text-2 {
+      // -moz-transform: translateX(100%); /* Firefox bug fix */
+      // -webkit-transform: translateX(100%); /* Firefox bug fix */
+      // transform: translateX(100%);
+      padding-left: 100%;
+      -webkit-animation: example2 15s linear infinite 1.5s;
+      -moz-animation: example2 15s linear infinite 1.5s;
+      animation: example2 15s linear infinite 1.5s;
+    }
+
+    .sliding-text-3{
+      padding-left: 100%;
+      -webkit-animation: example2 15s linear infinite 9s;
+      -moz-animation: example2 15s linear infinite 9s;
+      animation: example2 15s linear infinite 9s;
+    }
+  }
+  
+  .bottom-half-background{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 53vh;
+  
+    .imagotype{
+      width: auto;
+      max-height: 85px;
+    }
+  }
+  
+  /*  ====================
+        2. Fonts Styles
+      ====================*/
+  
+  .display-text{
+    font-size: 8rem;
+    text-transform: uppercase;
+    color: var(--color-black);
+    white-space: nowrap;
+    font-weight: 800;
+  }
+
+  .subtitle{
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+/*  =================
+      3. Animations    
+    =================*/
+
+@keyframes example1 {
+ 0%   { 
+ transform: translateX(0%);     
+ }
+ 100% { 
+ transform: translateX(-250%);
+ }
 }
 
-.bottom-half{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  height: 50vh;
+@-moz-keyframes example1 {
+  0%   { 
+  -moz-transform: translateX(0%); /* Firefox bug fix */
 
-  .imagotype{
-    width: auto;
-    max-height: 131px;
+  }
+  100% { 
+  -moz-transform: translateX(-250%); /* Firefox bug fix */
+ }
+} 
+@-webkit-keyframes example1 {
+  0%   { 
+  -webkit-transform: translateX(0%); /* Firefox bug fix */
+  }
+  100% { 
+  -webkit-transform: translateX(-250%); /* Firefox bug fix */
   }
 }
 
-/*  ====================
-      2. Fonts Styles
-    ====================*/
-
-.display-text{
-  font-size: 8em;
-  text-transform: uppercase;
-  font-weight: 800;
+@keyframes example2 {
+  0%   { 
+    transform: translateX(0%);     
+    }
+  100% { 
+  transform: translateX(-250%);
+  }
 }
-
-.homepage-contact-display-text{
-  color: var(--color-black);
-  overflow: hidden;
-  white-space: nowrap;
+@-moz-keyframes example2 {
+  0% { 
+  -moz-transform: translateX(0%); /* Firefox bug fix */
+  }
+  100% { 
+  -moz-transform: translateX(-250%); /* Firefox bug fix */
+  }
+} 
+@-webkit-keyframes example2 {
+  0% { 
+  -webkit-transform: translateX(0%); /* Firefox bug fix */
+  }
+  100% { 
+  -webkit-transform: translateX(-250%); /* Firefox bug fix */
+  }
+ }
+@keyframes example3 {
+  0%   { 
+    transform: translateX(0%);     
+    }
+  100% { 
+  transform: translateX(-250%);
+  }
 }
-
-.subtitle{
-  font-size: 32px;
-}
+@-moz-keyframes example3 {
+  0% { 
+  -moz-transform: translateX(0%); /* Firefox bug fix */
+  }
+  100% { 
+  -moz-transform: translateX(-250%); /* Firefox bug fix */
+  }
+} 
+@-webkit-keyframes example3 {
+  0% { 
+  -webkit-transform: translateX(0%); /* Firefox bug fix */
+  }
+  100% { 
+  -webkit-transform: translateX(-250%); /* Firefox bug fix */
+  }
+ }
+ 
