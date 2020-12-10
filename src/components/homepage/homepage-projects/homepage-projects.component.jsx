@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import Projects from "../../projects/projects.component";
 
-const HomepageProjects = ({url}) =>(
-        <React.Fragment>
-            <h1>Projects Page</h1>
-        </React.Fragment>    
-    )
+const HomepageProjects = ({ url }) => (
+  <React.Fragment>
+    <Projects />
+  </React.Fragment>
+);
 
-export default  HomepageProjects
+export default HomepageProjects;

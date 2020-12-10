@@ -1,6 +1,6 @@
 $primary-back-color: #14161A !default;
 
-body {
+.carousel-gallery{
   margin: 0;
   // font-family: 'Roboto';
   background: $primary-back-color;
@@ -8,15 +8,20 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-}
-
-.carousel-img{
-  width: 232px;
-  height: 288px;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px #000000B3;
-}
-.container{
-  width: 100%;
-  background: $primary-back-color 0% 0% no-repeat padding-box;
+  // display: flex;
+  // font-family: "Garnite";
+  .container{
+    width: 100%;
+    background: $primary-back-color 0% 0% no-repeat padding-box;
+    .carousel{
+      .carousel-item{
+        .carousel-img{
+          width: 232px;
+          height: 288px;
+          border-radius: 4px;
+          box-shadow: 0px 0px 20px #000000B3;
+        }
+      }
+    }
+  }
 }
