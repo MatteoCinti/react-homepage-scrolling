@@ -2,6 +2,7 @@
   ---INDEX 
     1. Font Imports
     2. Colours
+    3. Animations
 */
 
 
@@ -36,4 +37,14 @@
   --color-black: #000000;
   --color-black-shade: #14161A; 
   --color-text-pink: #FFF7ED;
+  --color-display-pink: #EEBECE;
+  --color-blue: #0B24FB;
+
+
+/*  =================
+      3. Animations
+    =================*/
+
+    --bezier: cubic-bezier(.3, -0.01, .49, 1);
+
 }

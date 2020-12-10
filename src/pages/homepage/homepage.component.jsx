@@ -51,6 +51,9 @@ const HomePage = () => (
                     </HomepageFrame>
                 } 
             />
+            <Route path='/work' element={ HomepageContact }/ >
+            <Route path='/contact' element={ HomepageContact }/ >
+            <Route path='/about' element={ HomepageContact }/ >
         </Routes>   
     </div>
 )
