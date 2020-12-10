@@ -39,46 +39,48 @@ function MyCarousel() {
   });
 
   return (
-    <div className="container">
-      <div className="carousel">
-        <div className="carousel-item">
-          <a href="#one!">
-            <img className="carousel-img" src={img} alt="" />
-          </a>
+    <div className="carousel-gallery">
+      <div className="container">
+        <div className="carousel">
+          <div className="carousel-item">
+            <a href="#one!">
+              <img className="carousel-img" src={img} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#two!">
+              <img className="carousel-img" src={img1} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#three!">
+              <img className="carousel-img" src={img2} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#four!">
+              <img className="carousel-img" src={img3} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#five!">
+              <img className="carousel-img" src={img4} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#six!">
+              <img className="carousel-img" src={img5} alt="" />
+            </a>
+          </div>
+          <div className="carousel-item">
+            <a href="#seven!">
+              <img className="carousel-img" src={img6} alt="" />
+            </a>
+          </div>
         </div>
-        <div className="carousel-item">
-          <a href="#two!">
-            <img className="carousel-img" src={img1} alt="" />
-          </a>
+        <div>
+          <img ref={subtitleRef} src={subtile1} alt="" />
         </div>
-        <div className="carousel-item">
-          <a href="#three!">
-            <img className="carousel-img" src={img2} alt="" />
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="#four!">
-            <img className="carousel-img" src={img3} alt="" />
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="#five!">
-            <img className="carousel-img" src={img4} alt="" />
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="#six!">
-            <img className="carousel-img" src={img5} alt="" />
-          </a>
-        </div>
-        <div className="carousel-item">
-          <a href="#seven!">
-            <img className="carousel-img" src={img6} alt="" />
-          </a>
-        </div>
-      </div>
-      <div>
-        <img ref={subtitleRef} src={subtile1} alt="" />
       </div>
     </div>
   );
