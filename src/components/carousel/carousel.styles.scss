@@ -2,14 +2,11 @@ $primary-back-color: #14161A !default;
 
 .carousel-gallery{
   margin: 0;
-  // font-family: 'Roboto';
   background: $primary-back-color;
   display: flex; // To center the carousel vertically in the viewport
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  // display: flex;
-  // font-family: "Garnite";
   .container{
     width: 100%;
     background: $primary-back-color 0% 0% no-repeat padding-box;
@@ -23,5 +20,18 @@ $primary-back-color: #14161A !default;
         }
       }
     }
+  }
+  .subtitle-text{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Granite";
+    .ideas-main{
+      opacity: 0.8;
+      color: #FFF7ED;
+    }
+    .ideas-text{
+      color: #EEBECE;
+      opacity: 1;
+    } 
   }
 }
