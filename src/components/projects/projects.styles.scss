@@ -17,7 +17,7 @@
     .container-icon{
         .box-item{
             cursor: pointer;
-            background-color: #D5B3B3;
+            background-color: var(--color-back-box-pink);
             box-sizing: border-box;
             float: left;
             margin: 10px;
@@ -39,7 +39,7 @@
     .subtitle{
         bottom: 35px;
         left: calc(44vw);
-        color: #FFF7ED;
+        color: var(--color-text-pink);
         opacity: 0.8;
         width: fit-content;
         position: absolute;
@@ -49,7 +49,7 @@
         text-align: center;
         a{
             text-decoration: none;
-            color: #FFF7ED;
+            color: var(--color-text-pink);
         }
         img{
             display: block;
