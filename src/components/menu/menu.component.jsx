@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { ReactComponent as Imagotype} from '../../assets/logo/doubleD-logo.svg'
-import { Link, Route, Routes } from 'react-router-dom'
-import HomepageContact from '../homepage/homepage-contact/homepage-contact.component'
+import { Link, } from 'react-router-dom'
 
 import './menu.styles.scss'
 
