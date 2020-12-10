@@ -1,0 +1,121 @@
+/* 
+  ---INDEX
+    1. Menu Layout 
+    2. Animation
+*/
+
+/*====================
+    1. Menu Layout
+  ====================*/
+
+.site-nav{
+  position: absolute;
+  display: grid;
+  grid-template-columns: 35vw 65vw;
+  grid-gap: 20px;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: var(--color-blue);
+  clip-path: circle(99px at top right);
+  transition: all ease-in-out 500ms;
+
+  // Fade In
+  &.open{
+    clip-path: circle(130vw at top right);
+    a{
+      animation: fadeIn var(--bezier) 900ms forwards;
+
+      &:nth-child(2){
+        animation-delay: 100ms;
+      }
+      &:nth-child(3){
+        animation-delay: 200ms;
+      }
+    }
+    .imagotype{
+      animation: fadeIn var(--bezier) 900ms forwards;
+      animation-delay: 300ms;
+    }
+  }
+  // Fade Out
+  &.closed{
+    a{
+      animation: fadeOut var(--bezier) 500ms forwards;
+
+      &:nth-child(3){
+        animation-delay: 30ms;
+      }
+      &:nth-child(2){
+        animation-delay: 70ms;
+      }
+      &:nth-child(1){
+        animation-delay: 100ms;
+      }
+    }
+    .imagotype{
+      animation: fadeOut var(--bezier) 700ms forwards;
+    }
+  }
+
+  .dropdown-links{
+    padding: 3em 6em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transform: translateY(20px);
+    min-width: 51em;
+  }
+ 
+  a {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    // Fluid Type and Spacing Modificator Function
+    // 1.Min Font Size 2.Max Font Size - MinFS 3.100vw - min-vw 4. max-vw - min-vw
+    font-size: calc(42px + (96 - 42) * ((100vw - 300px) / (1600 - 300)));
+    padding: calc(12px + (46 - 12) * ((100vw - 300px) / (1600 - 300))); 
+    white-space: nowrap;
+    transition: all ease-out 200ms;
+    
+    &:hover,
+    &:focus{
+     color: var(--color-display-pink);
+     font-size: 8em;
+    }
+  }
+
+  .imagotype {
+    opacity: 0;
+    transform: translateY(-22px);
+    max-width: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logotype {
+  margin-top: 22px;
+  margin-left: 25px;
+  z-index: 4;
+}
+
+/*=================
+    2. Animation
+  =================*/
+
+  @keyframes fadeIn {
+    0%{ transform: translateX(200px); opacity: 0; }
+    65%{ opacity: .2; }
+    100%{ transform: translateX(0%); opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    0%{ transform: translateX(0%); opacity:1;}
+    45%{ opacity: 0; }
+    100%{ transform: translateX(78%); opacity: 0; }
+  }
