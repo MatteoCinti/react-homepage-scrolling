@@ -1,10 +1,8 @@
 import React from "react";
 import "./pageOnClick.styles.scss";
 
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-import mobile from "./image/mobile.png";
-import vistapp from "./image/vistapp.png";
+import mobile from "../../assets/image/mobile.png";
+import vistapp from "../../assets/image/vistapp.png";
 
 function PageOnClick() {
   return (
