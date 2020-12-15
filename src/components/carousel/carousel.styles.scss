@@ -22,13 +22,13 @@ $primary-back-color: #14161A !default;
     }
   }
   .subtitle-text{
+    justify-content: center;
     font-size: 60px;
     font-family: "Granite";
     .ideas-main{
       opacity: 0.8;
       color: var(--color-text-pink);
-      position: fixed;
-      left: 235px;
+      margin-left: 235px;
       .ideas-text{
         color: var(--color-display-pink);
         opacity: 1;
