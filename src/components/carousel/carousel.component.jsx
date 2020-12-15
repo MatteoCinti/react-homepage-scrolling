@@ -92,6 +92,7 @@ function MyCarousel() {
         </div>
       </div>
       <br />
+      <br />
       <div>
         <div className="subtitle-text">
           <span className="ideas-main">
