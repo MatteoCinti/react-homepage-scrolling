@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
 import "./homepage-contact.styles.scss";
-import { ReactComponent as Imagotype} from '../../../assets/logo/doubleD-logo-small.svg'
 
 const transition = { duration: 1.3, ease: [0.43, 0.13, 0.23, 0.6]}
 
@@ -30,7 +29,6 @@ const HomepageContact = ({ url }) => {
       </h1>
     </div>
     <div  className="bottom-half-background">
-      <Imagotype className="imagotype"/>
       <p className="subtitle">
         So what do think. want to make something <br />
         great click on double D

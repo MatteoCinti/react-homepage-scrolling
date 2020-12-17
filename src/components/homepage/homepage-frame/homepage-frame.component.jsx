@@ -12,7 +12,7 @@ const HomepageFrame = ({url, children, section}) =>{
 
   const Handler = debounce( 
     handleScroll
-  , 800)
+  , 2000)
 
   // HandleHomepageRouting(up, down, navigate,section);
  
