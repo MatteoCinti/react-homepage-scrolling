@@ -1,9 +1,40 @@
-import React from 'react'
+// import React from 'react'
 
-const HomepageProcess = ({url}) => (
-    <React.Fragment>
-        <h1>Process Page</h1>
-    </React.Fragment>    
-)
+// const HomepageProcess = ({url}) => (
+//     <React.Fragment>
+//         <h1>Process Page</h1>
+//     </React.Fragment>
+// )
 
-export default  HomepageProcess
+// export default  HomepageProcess
+
+import React from "react";
+import "./homepage-process.styles.scss";
+
+import video1 from "../../../assets/videos/anima2-2.mp4";
+
+function HomepageProcess({ url }) {
+  return (
+    <div className="homepageprocess">
+      <div className="hp-p-wrapper">
+        <div className="hp-p-texts">
+          <div className="hp-p-text1">What process do you follow?</div>
+          <div className="hp-p-text2">Process!</div>
+          <div className="hp-p-text3">
+            Well at <span>Dunderdog</span> there is <span>no general</span> set
+            in stone <span>process.</span> It starts with “What if?” And
+            becomes, “Wouldn’t it be cool if?” Then it turns into, “Now that’s
+            cool!” Ideas are ideas. We believe every product exists within a
+            different context and that is why <span>we create</span> a{" "}
+            <span>tailored design process</span> specifically for your idea.
+          </div>
+        </div>
+        <div className="hp-p-animation">
+          <video src={video1} autoPlay={true} loop muted />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HomepageProcess;

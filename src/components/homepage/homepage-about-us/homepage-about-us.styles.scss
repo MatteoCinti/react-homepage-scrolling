@@ -1,0 +1,59 @@
+.homepageaboutus{
+    .hp-au-wrapper{
+        position: absolute;
+        top: 0%;
+        bottom: 0%;
+        left: 130px;
+        right: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hp-au-texts{
+            float: left;
+            width: 43%;
+            .hp-au-text1{
+                font-size: 40px;
+                font-weight: bolder;
+                color: var(--color-display-pink);
+                text-decoration: line-through;
+            }
+            .hp-au-text2{
+                font-size: 40px;
+                font-weight: bolder;
+                color: var(--color-display-pink);
+                margin-bottom: 38px;
+            }
+            .hp-au-text3{
+                color: var(--color-text-pink-second);
+                line-height: 30px;
+                margin-bottom: 65px;
+                span{
+                    color: var(--color-yellow);
+                    font-size: 40px;
+                    font-weight: bolder;
+                    span{
+                        color: var(--color-display-pink);
+                    }
+                }
+            }
+            .hp-au-subtitle{
+                font-size: 24px;
+                text-align: center;
+                font-family: "Granite";
+                width: 170px;
+                opacity: 0.8;
+                a{
+                    color: var(--color-text-pink-second);
+                    text-decoration: none;
+                }
+                img{
+                    display: block;
+                }
+            }
+        }
+        .hp-au-animation{
+            float: left;
+            width: 50%;
+        }
+    }
+}

@@ -62,10 +62,6 @@ function HomepageProjects({ url }) {
     ReactDOM.unmountComponentAtNode(mainRef.current);
   }
 
-  // let imageOnPage = imageHomeProjects.map(image => (
-  //   <div key={id}>image={image}</div>
-  // ))
-
   return (
     <div ref={homepageRef} className="homepage-projects">
       <div
