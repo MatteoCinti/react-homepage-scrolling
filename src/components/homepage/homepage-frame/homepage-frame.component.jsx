@@ -5,7 +5,6 @@ import { AnimatePresence, usePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { debounce } from 'lodash.debounce'
 
-import { debounce } from 'lodash'
 import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
 const transition = { duration: 3, ease: [0.43, 0.13, 0.23, 0.6]}
