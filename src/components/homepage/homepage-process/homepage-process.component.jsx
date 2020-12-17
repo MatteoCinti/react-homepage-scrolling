@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
-const HomepageProcess = ({url}) => (
-    <React.Fragment>
-        <h1>Process Page</h1>
-    </React.Fragment>    
-)
+import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
+
+const HomepageProcess = ({url}) => {
+    return (
+        <motion.div
+        exit={{opacity:0}}
+        >
+            <h1>Process Page</h1>
+        </motion.div>
+)}
 
 export default  HomepageProcess
