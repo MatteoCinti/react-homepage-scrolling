@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 
 import { AnimatePresence, usePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { debounce } from 'lodash.debounce'
+import { debounce } from 'lodash'
 
 import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
@@ -14,9 +14,7 @@ const HomepageFrame = ({url, children, section}) =>{
   const {up, down} = url
 
   const Handler = debounce( 
-    handleScroll
-
-  , 800)
+    handleScroll, 800)
 
   const [isPresent, safeToRemove] = usePresence()
   useEffect(() => {
