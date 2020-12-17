@@ -13,8 +13,7 @@ const HomepageFrame = ({url, children, section}) =>{
   const navigate = useNavigate();
   const {up, down} = url
 
-  const Handler = debounce( 
-    handleScroll, 800)
+  const Handler = debounce( handleScroll, 800 )
 
   const [isPresent, safeToRemove] = usePresence()
   useEffect(() => {
