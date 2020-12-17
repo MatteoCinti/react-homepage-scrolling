@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
 
-import {HomepageFrame, HomepageAboutUs, HomepageContact, HomepageLanding, HomepageProcess, HomepageProjects} from '../../components/'
+import { HomepageFrame, HomepageAboutUs, HomepageContact, HomepageLanding, HomepageProcess, HomepageProjects } from '../../components/'
 
 import routingData from '../../utilities/routing-data'
 
@@ -51,9 +51,9 @@ const HomePage = () => (
                     </HomepageFrame>
                 } 
             />
-            <Route path='/work' element={ HomepageContact }/ >
-            <Route path='/contact' element={ HomepageContact }/ >
-            <Route path='/about' element={ HomepageContact }/ >
+            <Route path='/work' element={  <HomepageContact/> }/ >
+            <Route path='/contact' element={  <HomepageContact/> }/ >
+            <Route path='/about' element={  <HomepageContact/> }/ >
         </Routes>   
     </div>
 )
