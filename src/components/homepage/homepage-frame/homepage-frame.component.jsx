@@ -13,7 +13,9 @@ const HomepageFrame = ({url, children, section}) =>{
   const navigate = useNavigate();
   const {up, down} = url
 
-  const handler = debounce(handleScroll, 800)
+  const Handler = debounce( 
+    handleScroll
+  , 2000)
 
   const [isPresent, safeToRemove] = usePresence()
   useEffect(() => {
@@ -26,11 +28,7 @@ const HomepageFrame = ({url, children, section}) =>{
       className={`${section ? `homepage-${section}` : '' } homepage-section`}
       onWheel={e => {
         e.persist()
-        // setTimeout(()=>{
-        //   handleScroll(e, up, down, navigate)
-        // },  1000)
-       
-        handler(e, up, down, navigate)
+        Handler(e, up, down, navigate)
       }}
       onKeyDown={e => handleArrowScroll(e, up, down, navigate)}
       tabIndex={0}
