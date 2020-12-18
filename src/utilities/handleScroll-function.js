@@ -60,4 +60,4 @@ const handleArrowScroll = (e, up, down, navigate) => {
 // }
 
 
-export { handleScroll, handleArrowScroll, HandleHomepageRouting }
+export { handleScroll, handleArrowScroll }
