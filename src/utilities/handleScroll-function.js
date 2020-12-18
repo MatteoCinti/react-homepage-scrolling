@@ -1,6 +1,3 @@
-import { useEffect } from 'react'
-import { debounce } from 'lodash.debounce'
-
 function preventDefault(e) {
     e = e || window.event;
     if (e.preventDefault)
@@ -41,26 +38,26 @@ const handleArrowScroll = (e, up, down, navigate) => {
     }, 30)
 }
 
-const HandleHomepageRouting = (up, down, navigate, section) => {
-    useEffect( () => {
-    window.addEventListener('wheel', e => {
-        handleScroll(e, up, down, navigate)
-    })
-    window.addEventListener('keydown', e => {
-        console.log(`mounted ${section}`)
-        handleArrowScroll(e, up, down, navigate)
-    }, false)
-    return () => {
-        window.removeEventListener('wheel', e => {
-            handleScroll(e, up, down, navigate)
-        })
-        console.log(`unmounted ${section}`)
-        window.removeEventListener('keydown', e => {
-            handleArrowScroll(e, up, down, navigate)
-        })
-    }
-}, []) 
-}
+// const HandleHomepageRouting = (up, down, navigate, section) => {
+//     useEffect( () => {
+//     window.addEventListener('wheel', e => {
+//         handleScroll(e, up, down, navigate)
+//     })
+//     window.addEventListener('keydown', e => {
+//         console.log(`mounted ${section}`)
+//         handleArrowScroll(e, up, down, navigate)
+//     }, false)
+//     return () => {
+//         window.removeEventListener('wheel', e => {
+//             handleScroll(e, up, down, navigate)
+//         })
+//         console.log(`unmounted ${section}`)
+//         window.removeEventListener('keydown', e => {
+//             handleArrowScroll(e, up, down, navigate)
+//         })
+//     }
+// }, []) 
+// }
 
 
 export { handleScroll, handleArrowScroll, HandleHomepageRouting }
