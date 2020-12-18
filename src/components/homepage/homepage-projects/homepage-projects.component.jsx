@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
-import Projects from "../../projects/projects.component";
+
 
 import icon1 from "../../../assets/image/29k.png";
 import icon2 from "../../../assets/image/UNESCO.png";
