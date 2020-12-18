@@ -1,12 +1,22 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+        
 import { AnimatePresence } from 'framer-motion'
 
-import { HomepageFrame, HomepageAboutUs, HomepageContact, HomepageLanding, HomepageProcess, HomepageProjects } from '../../components/'
+import {
+  HomepageFrame,
+  HomepageAboutUs,
+  HomepageContact,
+  HomepageLanding,
+  HomepageProcess,
+  HomepageProjects,
+} from "../../components/";
 
-import routingData from '../../utilities/routing-data'
-import './homepage.styles.scss'
+import PageOnClick from "../../components/pageonclick/pageOnClick.component";
 
+import routingData from "../../utilities/routing-data";
+
+import "./homepage.styles.scss";
 
 
 const HomePage = () => (
@@ -52,11 +62,11 @@ const HomePage = () => (
                         </HomepageFrame>
                     } 
                 />
+                <Route exact path="/projects/29K" element={<PageOnClick />} />
                 <Route path='/work' element={<HomepageContact /> } />
                 <Route path='/contact' element={ <HomepageContact /> } />
                 <Route path='/about' element={ <HomepageContact /> } />
             </Routes>   
     </div>
 )
-
-export default HomePage
+export default HomePage;

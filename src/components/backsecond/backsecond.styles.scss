@@ -2,12 +2,12 @@
 
 .projects-back-second{
     position: relative;
-    background-image: url(./image/29k_Web.png);
+    background-image: url(../../assets/image/29k_Web.png);
     background-size: contain;
     background-repeat: round;
     height: 100%;
     cursor: pointer;
-    animation: enterBackImg2 0.3s ease normal;
+    animation: enterBackImg2 0.6s ease-in-out normal;
 }
 @keyframes enterBackImg2{
     from{left: -100%;}

@@ -8,16 +8,16 @@
             .text-onclick1{
                 font-size: 40px;
                 font-weight: bolder;
-                color: #FFF7ED;
+                color: var(--color-text-pink);
             } 
             .text-onclick2{
                 font-size: 16px;
-                color: #FFF7EDCC;
+                color: var(--color-text-pink-second);
 
             }
             .text-onclick3{
                 font-size: 16px;
-                color: #EEBECE;
+                color: var(--color-display-pink); 
             }
         }
         .vist-icon{

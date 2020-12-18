@@ -1,11 +1,11 @@
 .projects-back-first{
     position: relative;
-    background-image: url(./image/woman.png);
+    background-image: url(../../assets/image/woman.png);
     background-size: contain;
     background-repeat: round;
     height: 100%;
     cursor: pointer;
-    animation: enterBackImage 0.3s ease normal;
+    animation: enterBackImage 0.6s ease-in-out normal;
 }
 @keyframes enterBackImage {
     from {left: -100%;}
