@@ -1,24 +1,14 @@
 import React, { useRef } from "react";
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 import "./homepage-projects.styles.scss";
 import Firstview from "../../backfirst/backfirst.component";
 import Secondview from "../../backsecond/backsecond.component";
-import PageOnClick from "../../pageonclick/pageOnClick.component";
 
 import icon1 from "../../../assets/image/29k.png";
 import icon2 from "../../../assets/image/UNESCO.png";
 import icon3 from "../../../assets/image/Group.png";
 import underline from "../../../assets/image/Underline.png";
-
-// import { imageHomeProjects } from "../../../assets/data";
-
-// const HomepageProjects = ({ url }) => (
-//   <React.Fragment>
-//     <Projects />
-//   </React.Fragment>
-// );
-
-// export default HomepageProjects;
 
 function HomepageProjects({ url }) {
   const mainRef = useRef();
@@ -27,12 +17,6 @@ function HomepageProjects({ url }) {
   const thirdRef = useRef();
   const subtitleRef = useRef();
   const homepageRef = useRef();
-
-  function handleClick() {
-    ReactDOM.render(<PageOnClick />, homepageRef.current);
-    mainRef.current.classList.add("deactive-icon");
-    firstViewRef.current.classList.add("deactive-icon");
-  }
 
   function handleMouseOverUnesco(e) {
     ReactDOM.render(<Firstview />, mainRef.current);
@@ -70,14 +54,15 @@ function HomepageProjects({ url }) {
         onMouseOver={outsideHover}
       ></div>
       <div className="container-icon">
-        <div
-          ref={firstViewRef}
-          className="box-item"
-          onClick={handleClick}
-          onMouseOver={handleMouseOverUnesco}
-        >
-          <img src={icon1} alt="" className="project-icon" />
-        </div>
+        <Link to="/projects/29k">
+          <div
+            ref={firstViewRef}
+            className="box-item"
+            onMouseOver={handleMouseOverUnesco}
+          >
+            <img src={icon1} alt="" className="project-icon" />
+          </div>
+        </Link>
         <div
           ref={secondViewRef}
           className="box-item"
@@ -85,17 +70,17 @@ function HomepageProjects({ url }) {
         >
           <img src={icon2} alt="" className="project-icon" />
         </div>
-        <a href="https://test.dunderdog.net/home/process">
+        <Link to="/home/process">
           <div ref={thirdRef} className="box-item">
             <img src={icon3} alt="" className="project-icon" />
           </div>
-        </a>
+        </Link>
       </div>
       <div ref={subtitleRef} className="subtitle">
-        <a href="https://test.dunderdog.net/home/about-us">
+        <Link to="/home/about-us">
           Know more
           <img src={underline} alt=""></img>
-        </a>
+        </Link>
       </div>
     </div>
   );
