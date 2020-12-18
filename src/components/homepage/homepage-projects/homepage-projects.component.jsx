@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import "./homepage-projects.styles.scss";
 import Firstview from "../../backfirst/backfirst.component";
 import Secondview from "../../backsecond/backsecond.component";
+  
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
+import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
+
 
 import icon1 from "../../../assets/image/29k.png";
 import icon2 from "../../../assets/image/UNESCO.png";
@@ -47,7 +53,11 @@ function HomepageProjects({ url }) {
   }
 
   return (
-    <div ref={homepageRef} className="homepage-projects">
+   <motion.div 
+      exit={{opacity:0}} 
+      ref={homepageRef} 
+      className="homepage-projects"
+   >
       <div
         ref={mainRef}
         className="container-full"
@@ -82,8 +92,9 @@ function HomepageProjects({ url }) {
           <img src={underline} alt=""></img>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
 
 export default HomepageProjects;

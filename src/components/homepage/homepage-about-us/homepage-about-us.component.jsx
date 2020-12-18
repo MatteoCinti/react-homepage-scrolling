@@ -1,12 +1,19 @@
-import React from "react";
-import "./homepage-about-us.styles.scss";
+import React from 'react'
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
+import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
 import underline from "../../../assets/image/Group 75.png";
 import video2 from "../../../assets/videos/anima1-2.mp4";
 
+
 function HomepageAboutUs({ url }) {
   return (
-    <div className="homepageaboutus">
+     <motion.div 
+      exit={{opacity: 0}} 
+      className="homepageaboutus"
+     >
       <div className="hp-au-wrapper">
         <div className="hp-au-texts">
           <div className="hp-au-text1">Traditional, mundane....</div>
@@ -32,7 +39,7 @@ function HomepageAboutUs({ url }) {
           <video src={video2} autoPlay={true} loop muted />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

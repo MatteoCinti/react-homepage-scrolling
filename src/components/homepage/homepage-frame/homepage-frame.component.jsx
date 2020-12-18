@@ -1,25 +1,38 @@
-import React from 'react'
+
+import React, {useEffect} from "react";
+
+import { AnimatePresence, usePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { debounce } from 'lodash'
 
 import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
-
+const transition = { duration: 3, ease: [0.43, 0.13, 0.23, 0.6]}
 
 const HomepageFrame = ({url, children, section}) =>{
   const navigate = useNavigate();
   const {up, down} = url
 
-  // HandleHomepageRouting(up, down, navigate,section);
+  const Handler = debounce( handleScroll, 800 )
+
+  const [isPresent, safeToRemove] = usePresence()
+  useEffect(() => {
+    !isPresent && setTimeout(safeToRemove, 1000)
+  }, [isPresent])
  
   return (
-      <div
-        className={`${section ? `homepage-${section}` : '' } homepage-section`}
-        onWheel={e => handleScroll(e, up, down, navigate)}
-        onKeyDown={e => handleArrowScroll(e, up, down, navigate)}
-        tabIndex={0}
+    <div 
+      className={`${section ? `homepage-${section}` : '' } homepage-section`}
+      onWheel={e => {
+        e.persist()
+        Handler(e, up, down, navigate)}}
+      onKeyDown={e => handleArrowScroll(e, up, down, navigate)}
+      tabIndex={0}
       >
-        {children}
-      </div> 
+        <AnimatePresence initial={false} exitBeforeEnter>
+            {children}
+        </AnimatePresence>  
+    </div> 
   )
 }
 

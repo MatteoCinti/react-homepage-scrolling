@@ -1,21 +1,20 @@
-// import React from 'react'
-
-// const HomepageProcess = ({url}) => (
-//     <React.Fragment>
-//         <h1>Process Page</h1>
-//     </React.Fragment>
-// )
-
-// export default  HomepageProcess
-
 import React from "react";
-import "./homepage-process.styles.scss";
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
+import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
 
 import video1 from "../../../assets/videos/anima2-2.mp4";
 
+import "./homepage-process.styles.scss";
+
+
 function HomepageProcess({ url }) {
   return (
-    <div className="homepageprocess">
+    <motion.div
+        exit={{opacity:0}} 
+       className="homepageprocess"
+    >
       <div className="hp-p-wrapper">
         <div className="hp-p-texts">
           <div className="hp-p-text1">What process do you follow?</div>
@@ -33,7 +32,7 @@ function HomepageProcess({ url }) {
           <video src={video1} autoPlay={true} loop muted />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
