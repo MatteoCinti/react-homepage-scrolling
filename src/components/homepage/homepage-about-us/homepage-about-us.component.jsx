@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-ro";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import "./homepage-about-us.styles.scss";
 
 import {
   handleScroll,
@@ -29,7 +30,7 @@ function HomepageAboutUs({ url }) {
             innovators in a unique non-hierarchical environment.
           </div>
           <div className="hp-au-subtitle">
-            <Link href="https://test.dunderdog.net/home/about-us">
+            <Link to="/home/about-us">
               Know more
               <img src={underline} alt=""></img>
             </Link>

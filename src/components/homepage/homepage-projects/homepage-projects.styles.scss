@@ -36,10 +36,18 @@
             }
         }
         .pic1:hover{
-            background-image: url(../../../assets/image/woman.png);
+            background-image: url(../../../assets/image/back29k.png);
+            background-size: contain;
+            .project-icon{
+                transform: scale(1.1);
+            }
         }
         .pic2:hover{
-            background-image: url(../../../assets/image/29k_Web.png);
+            background-image: url(../../../assets/image/backlongbro.png);
+            background-size: contain;
+            .project-icon{
+                transform: scale(1.1);
+            }
         }
     }
     .subtitle{
