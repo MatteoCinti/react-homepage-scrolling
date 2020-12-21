@@ -1,19 +1,19 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-ro";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
-import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
+import {
+  handleScroll,
+  handleArrowScroll,
+} from "../../../utilities/handleScroll-function";
 
 import underline from "../../../assets/image/Group 75.png";
 import video2 from "../../../assets/videos/anima1-2.mp4";
 
-
 function HomepageAboutUs({ url }) {
   return (
-     <motion.div 
-      exit={{opacity: 0}} 
-      className="homepageaboutus"
-     >
+    <motion.div exit={{ opacity: 0 }} className="homepageaboutus">
       <div className="hp-au-wrapper">
         <div className="hp-au-texts">
           <div className="hp-au-text1">Traditional, mundane....</div>
@@ -29,10 +29,10 @@ function HomepageAboutUs({ url }) {
             innovators in a unique non-hierarchical environment.
           </div>
           <div className="hp-au-subtitle">
-            <a href="https://test.dunderdog.net/home/about-us">
+            <Link href="https://test.dunderdog.net/home/about-us">
               Know more
               <img src={underline} alt=""></img>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hp-au-animation">

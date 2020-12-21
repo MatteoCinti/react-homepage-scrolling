@@ -35,10 +35,16 @@
                 right: 0;
             }
         }
+        .pic1:hover{
+            background-image: url(../../../assets/image/woman.png);
+        }
+        .pic2:hover{
+            background-image: url(../../../assets/image/29k_Web.png);
+        }
     }
     .subtitle{
-        bottom: 35px;
-        left: calc(44vw);
+        bottom: 55px;
+        left: calc(73vw);
         color: var(--color-text-pink);
         opacity: 0.8;
         width: fit-content;
@@ -56,18 +62,18 @@
       }
     }
 }
-.active-icon-first {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    backdrop-filter: blur(6px) !important;
-}
-.active-icon-second {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(17px) !important;
-}
+// .active-icon-first {
+//     background-color: rgba(255, 255, 255, 0.08) !important;
+//     backdrop-filter: blur(6px) !important;
+// }
+// .active-icon-second {
+//     background-color: rgba(255, 255, 255, 0.2) !important;
+//     backdrop-filter: blur(17px) !important;
+// }
 
-.deactive-icon {
-    visibility: hidden !important;
-}
+// .deactive-icon {
+//     visibility: hidden !important;
+// }
 
 
 
