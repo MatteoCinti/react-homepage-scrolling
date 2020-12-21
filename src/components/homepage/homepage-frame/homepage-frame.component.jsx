@@ -15,10 +15,11 @@ const HomepageFrame = ({url, children, section}) =>{
 
   const Handler = debounce( handleScroll, 800 )
 
-  const [isPresent, safeToRemove] = usePresence()
-  useEffect(() => {
-    !isPresent && setTimeout(safeToRemove, 1000)
-  }, [isPresent])
+  // const [isPresent, safeToRemove] = usePresence()
+
+  // useEffect(() => {
+  //   !isPresent && setTimeout(safeToRemove, 1000)
+  // }, [isPresent])
  
   return (
     <div 
