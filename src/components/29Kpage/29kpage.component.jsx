@@ -1,10 +1,10 @@
 import React from "react";
-import "./pageOnClick.styles.scss";
+import "./29kpage.styles.scss";
 
 import mobile from "../../assets/image/mobile.png";
 import vistapp from "../../assets/image/vistapp.png";
 
-function PageOnClick() {
+function TwentyNinePage() {
   return (
     <div className="page-on-click">
       <div className="wrapper-whole">
@@ -36,4 +36,4 @@ function PageOnClick() {
   );
 }
 
-export default PageOnClick;
+export default TwentyNinePage;
