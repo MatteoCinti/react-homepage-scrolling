@@ -90,17 +90,17 @@ function MyCarousel() {
             </a>
           </div>
         </div>
-      </div>
-      <br />
-      <br />
-      <div>
-        <div className="subtitle-text">
-          <span className="ideas-main">
-            We are the creators behind great{" "}
-            <span ref={subtitleRef} className="ideas-text">
-              ideas
+        <br />
+        <br />
+        <div>
+          <div className="subtitle-text">
+            <span className="ideas-main">
+              We are the creators behind great{" "}
+              <span ref={subtitleRef} className="ideas-text">
+                ideas
+              </span>
             </span>
-          </span>
+          </div>
         </div>
       </div>
     </div>
