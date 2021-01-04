@@ -1,4 +1,8 @@
 import React from "react";
+import "./langbropage.styles.scss";
+
+import chef from "../../assets/image/chef.png";
+import icon from "../../assets/image/visitweb.png";
 
 function LangbroPage() {
   return (
@@ -6,7 +10,9 @@ function LangbroPage() {
       <div className="lbpage-wrapper">
         <div className="lbpage-texts">
           <div className="lbpage-header">
-            “We are proud to contribute to Langbro Success”
+            “We are proud to{" "}
+            <span style={{ color: "#F8F025" }}>contribute</span> to{" "}
+            <span style={{ color: "#EEBECE" }}>Langbro</span> Success”
           </div>
           <div className="lbpage-text1">
             Långbro Värdshus is restaurant open 24 hours and they serve our
@@ -18,8 +24,12 @@ function LangbroPage() {
           </div>
         </div>
         <div className="lbpage-images">
-          <div className="lbpage-image"></div>
-          <div className="lbpage-icon"></div>
+          <div className="lbpage-image">
+            <img src={chef} alt="" />
+          </div>
+          <div className="lbpage-icon">
+            <img src={icon} alt="" />
+          </div>
         </div>
       </div>
     </div>

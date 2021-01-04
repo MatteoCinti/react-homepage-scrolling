@@ -13,6 +13,7 @@ import {
 } from "../../components/";
 
 import TwentyNinePage from "../../components/29Kpage/29kpage.component";
+import LangbroPage from "../../components/langbropage/langbropage.component";
 
 import routingData from "../../utilities/routing-data";
 
@@ -67,6 +68,7 @@ const HomePage = () => (
         }
       />
       <Route exact path="/projects/29K" element={<TwentyNinePage />} />
+      <Route exact path="/projects/Langbro" element={<LangbroPage />} />
       <Route path="/work" element={<HomepageContact />} />
       <Route path="/contact" element={<HomepageContact />} />
       <Route path="/about" element={<HomepageContact />} />

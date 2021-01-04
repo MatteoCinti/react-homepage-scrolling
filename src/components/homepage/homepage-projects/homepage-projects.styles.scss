@@ -26,6 +26,7 @@
             visibility: visible;
             position: relative;
             border-radius: 20px;
+            transition: background-image ease-in-out;
             .project-icon{
                 position: absolute;
                 margin: auto;
