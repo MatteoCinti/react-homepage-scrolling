@@ -8,7 +8,10 @@
 /*  ====================
     1. Page Layout
   ====================*/
-  $baseline: 22px;
+
+  .homepage-contact{
+    background-color: var(--color-black);
+  }
 
   .top-half-background{
     height: 47vh; 
@@ -21,35 +24,12 @@
     align-items: center;
 
     .sliding-text{
-      height: 50%; 
+      $bezier: cubic-bezier(.48,0,.5,1);
       width: 100%; 
-      margin: auto; 
-      position: absolute; 
-      top: 0; left: 0; bottom: 0; right: 0; /* Set the bounds in which to center it, relative to its parent/container */
-      line-height: 12rem;
-     
-    }
-    .sliding-text-start{
-      -webkit-animation: example1 15s linear forwards;
-      -moz-animation: example1 15s linear forwards;
-      animation: example1 15s linear forwards;
-    }
-  
-    .sliding-text-2 {
-      // -moz-transform: translateX(100%); /* Firefox bug fix */
-      // -webkit-transform: translateX(100%); /* Firefox bug fix */
-      // transform: translateX(100%);
-      padding-left: 100%;
-      -webkit-animation: example2 15s linear infinite 1.5s;
-      -moz-animation: example2 15s linear infinite 1.5s;
-      animation: example2 15s linear infinite 1.5s;
-    }
-
-    .sliding-text-3{
-      padding-left: 100%;
-      -webkit-animation: example2 15s linear infinite 9s;
-      -moz-animation: example2 15s linear infinite 9s;
-      animation: example2 15s linear infinite 9s;
+      -webkit-animation: example1 15s $bezier infinite;
+      -moz-animation: example1 15s $bezier infinite;
+      animation: example1 15s $bezier infinite;
+      overflow: visible
     }
   }
   
@@ -64,8 +44,13 @@
   
     .imagotype{
       width: auto;
-      max-height: 85px;
+      max-height: 59px;
     }
+
+    img{
+      width: 75%;
+    }
+
   }
   
   /*  ====================
@@ -83,85 +68,45 @@
   .subtitle{
     font-size: 32px;
     letter-spacing: 1px;
+    margin: 5vh;
   }
 
-/*  =================
-      3. Animations    
-    =================*/
+/*=================
+    3. Animations    
+  =================*/
 
-@keyframes example1 {
- 0%   { 
- transform: translateX(0%);     
- }
- 100% { 
- transform: translateX(-250%);
- }
-}
-
-@-moz-keyframes example1 {
-  0%   { 
-  -moz-transform: translateX(0%); /* Firefox bug fix */
-
-  }
-  100% { 
-  -moz-transform: translateX(-250%); /* Firefox bug fix */
- }
-} 
-@-webkit-keyframes example1 {
-  0%   { 
-  -webkit-transform: translateX(0%); /* Firefox bug fix */
-  }
-  100% { 
-  -webkit-transform: translateX(-250%); /* Firefox bug fix */
-  }
-}
-
-@keyframes example2 {
-  0%   { 
-    transform: translateX(0%);     
+  @keyframes example1 {
+    0%   { 
+      transform: translateX(0%); /* Firefox bug fix */
+      }
+      50% { 
+      transform: translateX(-75%); /* Firefox bug fix */
     }
-  100% { 
-  transform: translateX(-250%);
-  }
-}
-@-moz-keyframes example2 {
-  0% { 
-  -moz-transform: translateX(0%); /* Firefox bug fix */
-  }
-  100% { 
-  -moz-transform: translateX(-250%); /* Firefox bug fix */
-  }
-} 
-@-webkit-keyframes example2 {
-  0% { 
-  -webkit-transform: translateX(0%); /* Firefox bug fix */
-  }
-  100% { 
-  -webkit-transform: translateX(-250%); /* Firefox bug fix */
-  }
- }
-@keyframes example3 {
-  0%   { 
-    transform: translateX(0%);     
+      100% { 
+      transform: translateX(0%); /* Firefox bug fix */
     }
-  100% { 
-  transform: translateX(-250%);
   }
-}
-@-moz-keyframes example3 {
-  0% { 
-  -moz-transform: translateX(0%); /* Firefox bug fix */
+
+  @-moz-keyframes example1 {
+    0%   { 
+    -moz-transform: translateX(0%); /* Firefox bug fix */
+    }
+    50% { 
+    -moz-transform: translateX(-75%); /* Firefox bug fix */
   }
-  100% { 
-  -moz-transform: translateX(-250%); /* Firefox bug fix */
+    100% { 
+    -moz-transform: translateX(0%); /* Firefox bug fix */
   }
-} 
-@-webkit-keyframes example3 {
-  0% { 
-  -webkit-transform: translateX(0%); /* Firefox bug fix */
+  } 
+
+  @-webkit-keyframes example1 {
+    0%   { 
+      -webkit-transform: translateX(0%); /* Firefox bug fix */
+      }
+      50% { 
+      -webkit-transform: translateX(-75%); /* Firefox bug fix */
+    }
+      100% { 
+      -webkit-transform: translateX(0%); /* Firefox bug fix */
+    }
   }
-  100% { 
-  -webkit-transform: translateX(-250%); /* Firefox bug fix */
-  }
- }
- 

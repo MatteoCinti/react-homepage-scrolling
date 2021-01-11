@@ -1,39 +1,31 @@
 .homepageprocess{
-    .hp-p-wrapper{
-        position: absolute;
-        top: 0%;
-        bottom: 0%;
-        left: 130px;
-        right: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .hp-p-texts{
-            float: left;;
-            width: 43%;
-            .hp-p-text1{
-                font-size: 40px;
-                color: var(--color-display-pink);
-                font-weight: bolder;
-                text-decoration: line-through;
-            }
-            .hp-p-text2{
-                font-size: 40px;
-                font-weight: bolder;
-                color: var(--color-yellow);
-                margin-bottom: 34px;
-            }
-            .hp-p-text3{
-                color: var(--color-text-pink-second);
-                line-height: 30px;
-                span{
-                    color: var(--color-yellow)
-                }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 3em 3em 5em;
+    height: 100vh;
+    .hp-p-texts{
+        width: 43%;
+        margin-right: 2em;
+        .hp-p-text1{
+            font-size: 40px;
+            color: var(--color-display-pink);
+            font-weight: bolder;
+            text-decoration: line-through;
+        }
+        .hp-p-text2{
+            font-size: 40px;
+            font-weight: bolder;
+            color: var(--color-yellow);
+            margin-bottom: 34px;
+        }
+        .hp-p-text3{
+            color: var(--color-text-pink-second);
+            line-height: 30px;
+            span{
+                color: var(--color-yellow)
             }
         }
-        .hp-p-animation{
-            float: left;
-            width: 50%;
-        }  
     }
 }

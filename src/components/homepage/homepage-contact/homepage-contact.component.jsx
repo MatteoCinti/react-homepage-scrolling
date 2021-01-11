@@ -1,23 +1,28 @@
-import React, {useEffect} from "react";
+import React, { useContext } from "react";
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { pageTransitionUp, pageTransitionDown } from '../../../utilities/framer-motion-variants';
 
-import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
+import Button from '../../buttons/link-button/link-button.component'
+import { ReactComponent as DesignAndDevelopmentLogotype } from '../../../assets/logo/design_and_development.svg'
+import { ReactComponent as Imagotype } from '../../../assets/logo/imagotype.svg'
 
 import "./homepage-contact.styles.scss";
-const transition = { duration: 1.3, ease: [0.43, 0.13, 0.23, 0.6]}
+import { ScrollContext } from '../../../utilities/scrollContext'
 
 const HomepageContact = ({ url }) => {
+  const { scrollDirection } = useContext(ScrollContext)
+  let pageTransition = scrollDirection === 'up' ? pageTransitionUp : pageTransitionDown
+
   return (
   <motion.div
-    className = 'homepage-section'
-    initial={{opacity: 0, y: -400}}
-    animate={{ opacity: 1, y: 0, transition: {duration: 2, ease:[0.25, 1, 0.5, 1]} }}
-    exit={{ opacity: 0, y: 400 }}
-    transition={transition} 
+    variants={ pageTransition }
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    transition="transition"
   >
     <div className="top-half-background">
-      <h1 className="display-text sliding-text sliding-text-start">
+      {/* <h1 className="display-text sliding-text sliding-text-start">
         DESIGN & DEVELOPMENT
       </h1>
       <h1 className="display-text sliding-text sliding-text-2">
@@ -25,13 +30,15 @@ const HomepageContact = ({ url }) => {
       </h1>
       <h1 className="display-text sliding-text sliding-text-3">
         DESIGN & DEVELOPMENT
-      </h1>
+      </h1> */}
+      <DesignAndDevelopmentLogotype className="sliding-text" viewBox="60 55" preserveAspectRatio={true.toString()}/>
     </div>
     <div  className="bottom-half-background">
+      <Imagotype className="imagotype landing-contact-imagotype"/>
       <p className="subtitle">
-        So what do think. want to make something <br />
-        great click on double D
+        Want to make something great,
       </p>
+      <Button section="Let 's talk"/>  
     </div>
   </motion.div>
 )};
