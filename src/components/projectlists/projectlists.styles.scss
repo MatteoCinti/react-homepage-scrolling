@@ -1,0 +1,27 @@
+.projectlists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .p-list-texts{
+        width: 40%;
+        padding-left: 136px;
+        padding-right: 52px;
+        .p-list-title{
+
+        }
+        .p-list-description{
+
+        }
+        .p-list-question{
+
+        }
+        .p-list-button{
+
+        }
+    }
+    .p-list-images{
+        padding-left: 75px;
+        width: 60%;
+        margin-top: 55px;
+    }
+}
