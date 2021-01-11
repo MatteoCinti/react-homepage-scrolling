@@ -1,23 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./homepage-projects.styles.scss";
-
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { pageTransitionUp, pageTransitionDown } from '../../../utilities/framer-motion-variants';
 
-import {
-  handleScroll,
-  handleArrowScroll,
-} from "../../../utilities/handleScroll-function";
+import "./homepage-projects.styles.scss";
 
 import icon1 from "../../../assets/image/29k.png";
 import icon2 from "../../../assets/image/langbro.png";
 import icon3 from "../../../assets/image/Group.png";
 import underline from "../../../assets/image/Underline.png";
+import { ScrollContext } from '../../../utilities/scrollContext'
 
 function HomepageProjects({ url }) {
+  const { scrollDirection } = useContext(ScrollContext)
+  let pageTransition = scrollDirection === 'up' ? pageTransitionUp : pageTransitionDown
+
   return (
-    <motion.div exit={{ opacity: 0 }} className="homepage-projects">
+    <motion.div
+      variants={ pageTransition }
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition="transition" 
+      className="homepage-projects"
+     >
       <div className="container-full"></div>
       <div className="container-icon">
         <Link to="/projects/29k">

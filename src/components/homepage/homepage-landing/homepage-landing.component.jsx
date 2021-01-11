@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-
-import { handleScroll, handleArrowScroll } from '../../../utilities/handleScroll-function'
+import { pageTransitionUp, pageTransitionDown } from '../../../utilities/framer-motion-variants';
 
 import MyCarousel from "../../carousel/carousel.component";
 
+import { ScrollContext } from '../../../utilities/scrollContext'
+
 const HomepageLanding = ({ url }) => {
-  return(
-    <motion.div 
-      exit={{opacity:0}}
+  const { scrollDirection } = useContext(ScrollContext)
+  let pageTransition = scrollDirection === 'up' ? pageTransitionUp : pageTransitionDown
+
+  return (
+    <motion.div
+      variants={ pageTransition }
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition="transition"
     >
       <MyCarousel />
     </motion.div>

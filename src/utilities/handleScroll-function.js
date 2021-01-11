@@ -1,36 +1,28 @@
-function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-      e.preventDefault();
-    e.returnValue = false;  
-  }
-
- 
-const handleScroll = (e, up, down, navigate) => {
+const handleScroll = (e, up, down, navigate, scrollDirection, toggleScrollDirection) => {
     if (e.deltaY < 0) {
-            console.log('scrolling up');
             e.preventDefault()
+            toggleScrollDirection('up');
             return(
                 navigate(up)
             )
     } else if (e.deltaY > 0) {
-        console.log('scrolling down');
         e.preventDefault()
+        toggleScrollDirection('down');
         return(
             navigate(down)
         )    
     }     
 }
 
-const handleArrowScroll = (e, up, down, navigate) => {
+const handleArrowScroll = (e, up, down, navigate, scrollDirection, toggleScrollDirection) => {
     setTimeout(function(){ 
         if (e.keyCode === 38) {
-            console.log('keying up');
+            toggleScrollDirection('up');
             return(
                 navigate(up)
             )
         } else if (e.keyCode === 40){
-            console.log('keying down');
+            toggleScrollDirection('down');
             return(
                 navigate(down)
             )

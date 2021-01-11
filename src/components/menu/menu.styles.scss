@@ -10,17 +10,13 @@
 
 .site-nav{
   position: absolute;
-  display: grid;
-  grid-template-columns: 35vw 65vw;
-  grid-gap: 20px;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
   height: 100vh;
   background-color: var(--color-blue);
   clip-path: circle(99px at top right);
-  transition: all ease-in-out 500ms;
+  transition: all ease-in-out 700ms;
 
   // Fade In
   &.open{
@@ -35,33 +31,26 @@
         animation-delay: 200ms;   
       }
     }
-    .imagotype{
-      animation: fadeIn var(--bezier) 900ms forwards;
-      animation-delay: 300ms;
-    }
   }
   // Fade Out
   &.closed{
     a{
-      animation: fadeOut var(--bezier) 500ms forwards;
+      animation: fadeOut var(--bezier) 700ms forwards;
 
       &:nth-child(3){
-        animation-delay: 30ms;
-      }
-      &:nth-child(2){
         animation-delay: 70ms;
       }
-      &:nth-child(1){
-        animation-delay: 100ms;
+      &:nth-child(2){
+        animation-delay: 140ms;
       }
-    }
-    .imagotype{
-      animation: fadeOut var(--bezier) 700ms forwards;
+      &:nth-child(1){
+        animation-delay: 210ms;
+      }
     }
   }
 
   .dropdown-links{
-    padding: 3em 6em;
+    padding: 3em 12em;
     list-style: none;
     display: flex;
     flex-direction: column;
