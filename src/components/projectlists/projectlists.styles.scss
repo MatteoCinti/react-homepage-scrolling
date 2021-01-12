@@ -1,9 +1,18 @@
+.p-list-identifyimg{
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    img{
+        &:hover{
+            background-color: rgba(0,0,0, 0.1);
+        }
+    }
+}
 .projectlists{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
     .p-list-texts{
-        width: 40%;
+        margin-top: 20vh;
+        grid-column: span 5;
         padding-left: 136px;
         padding-right: 52px;
         .p-list-title{
@@ -30,9 +39,16 @@
             }
         }
     }
-    .p-list-images{
-        padding-left: 75px;
-        width: 60%;
+    .p-list-image-col-1{
+        grid-column: span 3;
+        padding-left: 50px;
+    }
+    .p-list-image-col-2{
+        grid-column: span 3;
+        padding-left: 30px;
+    }
+    .p-list-yearnavbar{
+        grid-column: span 1;
     }
 }
 

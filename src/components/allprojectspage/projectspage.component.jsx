@@ -3,19 +3,10 @@ import "./projectspage.styles.scss";
 import { useParams } from "react-router-dom";
 import { projectData } from "../../utilities/project-data";
 
-import chef from "../../assets/image/chef.png";
-import icondd from "../../assets/image/visitweb.png";
-
 function ProjectsPage(props) {
   const { serviceId } = useParams();
   const thisService = projectData.find((service) => service.id === serviceId);
 
-  {
-    console.log(`serviceId: ${serviceId}`);
-  }
-  {
-    console.log(`This Service: ${thisService}`);
-  }
   return (
     <div className="langbro-page">
       <div className="lbpage-wrapper">

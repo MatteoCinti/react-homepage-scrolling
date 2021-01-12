@@ -6,12 +6,18 @@ import Button from "../buttons/link-button/link-button.component";
 
 function ProjectsList() {
   const projects = projectData.map((project) => (
-    <div key={project.id}>
+    <div key={project.id} className="p-list-identifyimg">
       <Link to={`/projects/${project.id}`}>
         <img src={project.identifyphoto}></img>
       </Link>
     </div>
   ));
+
+  // var halfwayPoint = Math.ceil(projects.length / 2);
+  // var columnA = projects.splice(0, halfwayPoint);
+  // var columnB = projects.splice(halfwayPoint, projects.length);
+
+  console.log(projects.length);
 
   return (
     <div className="projectlists">
@@ -28,7 +34,8 @@ function ProjectsList() {
           <Button section="Let 's talk" />
         </div>
       </div>
-      <div className="p-list-images">{projects}</div>
+      <div className="p-list-image-col-1">{projects}</div>
+      {/* <div className="p-list-image-col-2">{columnB}</div> */}
     </div>
   );
 }
