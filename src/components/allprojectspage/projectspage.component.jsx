@@ -7,9 +7,6 @@ import chef from "../../assets/image/chef.png";
 import icondd from "../../assets/image/visitweb.png";
 
 function ProjectsPage(props) {
-  // const { name, title, description, text, image, icon } = props;
-  // const image1 = require(props.projectData.image);
-
   const { serviceId } = useParams();
   const thisService = projectData.find((service) => service.id === serviceId);
 

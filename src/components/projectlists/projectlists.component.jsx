@@ -2,6 +2,7 @@ import React from "react";
 import { projectData } from "../../utilities/project-data";
 import { Link } from "react-router-dom";
 import "./projectlists.styles.scss";
+import Button from "../buttons/link-button/link-button.component";
 
 function ProjectsList() {
   const projects = projectData.map((project) => (
@@ -23,7 +24,9 @@ function ProjectsList() {
           aim is to deliver world-class solutions to our client's growth.
         </div>
         <div className="p-list-question">Have a project?</div>
-        <div className="p-list-button"></div>
+        <div className="p-list-button">
+          <Button section="Let 's talk" />
+        </div>
       </div>
       <div className="p-list-images">{projects}</div>
     </div>

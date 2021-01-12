@@ -1,5 +1,3 @@
-// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
-
 .homepage-projects{
     position: absolute;
     width: 100%;
@@ -15,6 +13,7 @@
         position: absolute;
     }
     .container-icon{
+        margin-bottom: 7vh;
         .box-item{
             cursor: pointer;
             background-color: var(--color-back-box-pink);
@@ -52,37 +51,12 @@
         }
     }
     .subtitle{
-        bottom: 55px;
+        bottom: 0px;
         left: calc(73vw);
-        color: var(--color-text-pink);
-        opacity: 0.8;
-        width: fit-content;
         position: absolute;
-        visibility: visible;
-        font-family: 'Granite';
-        font-size: 24px;
-        text-align: center;
-        a{
-            text-decoration: none;
-            color: var(--color-text-pink);
-        }
-        img{
-            display: block;
-      }
     }
 }
-// .active-icon-first {
-//     background-color: rgba(255, 255, 255, 0.08) !important;
-//     backdrop-filter: blur(6px) !important;
-// }
-// .active-icon-second {
-//     background-color: rgba(255, 255, 255, 0.2) !important;
-//     backdrop-filter: blur(17px) !important;
-// }
 
-// .deactive-icon {
-//     visibility: hidden !important;
-// }
 
 
 

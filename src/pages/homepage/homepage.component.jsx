@@ -13,8 +13,6 @@ import {
   HomepageProcess,
   HomepageProjects,
 } from "../../components/";
-import TwentyNinePage from "../../components/29Kpage/29kpage.component";
-import LangbroPage from "../../components/allprojectspage/projectspage.component";
 
 import {
   ScrollContextProvider,

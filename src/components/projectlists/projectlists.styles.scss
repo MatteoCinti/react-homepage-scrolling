@@ -7,21 +7,32 @@
         padding-left: 136px;
         padding-right: 52px;
         .p-list-title{
-
+            font-size: 60px;
+            font-family: "Granite";
+            color: var(--color-display-pink);
         }
         .p-list-description{
-
+            padding-top: 6vh;
+            color: var(--color-text-pink-second);
         }
         .p-list-question{
-
+            padding-top: 6vh;
+            color: var(--color-yellow);
+            font-size: 40px;
+            font-weight: bolder;
         }
         .p-list-button{
-
+            padding-top: 6vh;
+            .button{
+                img{
+                    width: 120px;
+                }
+            }
         }
     }
     .p-list-images{
         padding-left: 75px;
         width: 60%;
-        margin-top: 55px;
     }
 }
+

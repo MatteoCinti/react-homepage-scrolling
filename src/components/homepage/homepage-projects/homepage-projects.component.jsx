@@ -14,8 +14,8 @@ import "./homepage-projects.styles.scss";
 import icon1 from "../../../assets/image/29k.png";
 import icon2 from "../../../assets/image/langbro.png";
 import icon3 from "../../../assets/image/Group.png";
-import underline from "../../../assets/image/Underline.png";
 import { ScrollContext } from "../../../utilities/scrollContext";
+import Button from "../../buttons/link-button/link-button.component";
 
 function HomepageProjects({ url }) {
   const { scrollDirection } = useContext(ScrollContext);
@@ -38,12 +38,12 @@ function HomepageProjects({ url }) {
     >
       <div className="container-full"></div>
       <div className="container-icon">
-        <Link to="/projects/1">
+        <Link to="/projects/2">
           <div className="box-item pic1">
             <img src={icon1} alt="" className="project-icon" />
           </div>
         </Link>
-        <Link to="/projects/2">
+        <Link to="/projects/1">
           <div className="box-item pic2">
             <img src={icon2} alt="" className="project-icon" />
           </div>
@@ -55,10 +55,9 @@ function HomepageProjects({ url }) {
         </Link>
       </div>
       <div className="subtitle">
-        <Link to="/home/about-us">
-          Know more
-          <img src={underline} alt=""></img>
-        </Link>
+        <Button section="Know more" />
+        {/* <Link to="/home/about-us">
+        </Link> */}
       </div>
     </motion.div>
   );
