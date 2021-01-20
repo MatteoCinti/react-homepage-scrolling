@@ -17,6 +17,7 @@
   background-color: var(--color-blue);
   clip-path: circle(99px at top right);
   transition: all ease-in-out 700ms;
+  z-index: 2;
 
   // Fade In
   &.open{

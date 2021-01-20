@@ -1,18 +1,54 @@
 .p-list-identifyimg{
     margin-top: 6vh;
-    margin-bottom: 6vh;
-    img{
-        &:hover{
-            background-color: rgba(0,0,0, 0.1);
+    position: relative;
+    // &::before{
+    //     content:"";
+    //     position: absolute;
+    //     top: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     left: 0;
+    //     z-index: 1;
+    //     box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.75);
+    //     border-radius: 20px;
+    // }
+    &:hover{
+       .container .wrapper{
+            width: 100%;
+        }
+    }
+    .container{
+        position: relative;
+        width: 100%;
+        .wrapper{
+            border-radius: 20px;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            width: 0%;
+            height: 100%;
+            transition: 0.5s ease;
+            .text{
+                color: var(--color-white);
+                font-size: 40px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
         }
     }
 }
+
 .projectlists{
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
+    display: flex;
     .p-list-texts{
         margin-top: 20vh;
-        grid-column: span 5;
+        max-width: 40vw;
         padding-left: 136px;
         padding-right: 52px;
         .p-list-title{
@@ -40,15 +76,31 @@
         }
     }
     .p-list-image-col-1{
-        grid-column: span 3;
         padding-left: 50px;
     }
     .p-list-image-col-2{
-        grid-column: span 3;
-        padding-left: 30px;
+        padding-left: 85px;
+        margin-top: -10vh;
     }
     .p-list-yearnavbar{
-        grid-column: span 1;
+        
+    }
+    .top-gradient{
+        height: 100px;
+        width: 100%;
+        background:linear-gradient(rgba(20, 22, 26, 1), rgba(0, 0, 0, 0));
+        position: fixed;
+        top:0;
+        z-index: 1;
+    }
+    .bottom-gradient{
+        height: 100px;
+        width: 100%;
+        background:linear-gradient(to top, rgba(20, 22, 26, 1), rgba(0, 0, 0, 0));	
+        position: fixed;
+        bottom:0;
+        z-index: 1;
     }
 }
+
 

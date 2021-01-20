@@ -6,18 +6,31 @@ import Button from "../buttons/link-button/link-button.component";
 
 function ProjectsList() {
   const projects = projectData.map((project) => (
-    <div key={project.id} className="p-list-identifyimg">
-      <Link to={`/projects/${project.id}`}>
-        <img src={project.identifyphoto}></img>
-      </Link>
-    </div>
+    <Link to={`/projects/${project.id}`}>
+      <div key={project.id} className="p-list-identifyimg">
+        <div className="container">
+          <img src={project.identifyphoto}></img>
+          <div className="wrapper">
+            <div className="text">
+              <p>{project.name}</p>
+              <p>{project.year}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Link>
   ));
 
-  // var halfwayPoint = Math.ceil(projects.length / 2);
-  // var columnA = projects.splice(0, halfwayPoint);
-  // var columnB = projects.splice(halfwayPoint, projects.length);
+  let odd = [];
+  let even = [];
 
-  console.log(projects.length);
+  for (let i = 0; i < projects.length; i++) {
+    if (i % 2 === 0) {
+      even.push(projects[i]);
+    } else {
+      odd.push(projects[i]);
+    }
+  }
 
   return (
     <div className="projectlists">
@@ -34,8 +47,10 @@ function ProjectsList() {
           <Button section="Let 's talk" />
         </div>
       </div>
-      <div className="p-list-image-col-1">{projects}</div>
-      {/* <div className="p-list-image-col-2">{columnB}</div> */}
+      <div className="p-list-image-col-1">{even}</div>
+      <div className="p-list-image-col-2">{odd}</div>
+      <div className="top-gradient"></div>
+      <div className="bottom-gradient"></div>
     </div>
   );
 }

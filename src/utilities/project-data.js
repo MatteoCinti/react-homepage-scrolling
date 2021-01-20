@@ -1,7 +1,7 @@
 export const projectData= [
     {
         "id":"1",
-        name: "langbro",
+        name: "Langbro",
         title: ["We are proud to ",<span style={{ color: '#F8F025' }}>contribute</span>, " to ", <span style={{ color: '#EEBECE' }}>Langbro</span>, " Success"],
         description: "Långbro Värdshus is restaurant open 24 hours and they serve our customers good food based on the flavors and ingredients of the season.",
         text: "Role - Branding, Web design and Lead generation",
