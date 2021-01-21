@@ -1,6 +1,9 @@
 const menuToggle = e => {
   var navigation = document.querySelector('.site-nav');
   var hamburger = document.querySelector('.hamburger');
+  var links = document.querySelectorAll('.dropdown-links a')
+
+  console.log(links);
 
   const addClass = () => {
     navigation.classList.remove('closed');  
@@ -15,6 +18,11 @@ const menuToggle = e => {
   }
 
   navigation.classList.contains('open') ? removeClass() : addClass();
+  links.forEach(link => { 
+    link.addEventListener('click', e => {
+      removeClass();
+    })
+  })
 }
 
 export {menuToggle}
