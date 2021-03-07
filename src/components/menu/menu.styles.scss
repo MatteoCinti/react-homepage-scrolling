@@ -65,6 +65,8 @@
     display: block;
     font-style: normal;
     font-weight: bold;
+    color:snow;
+    text-decoration: none;
     // Fluid Type and Spacing Modificator Function
     // 1.Min Font Size 2.Max Font Size - MinFS 3.100vw - min-vw 4. max-vw - min-vw
     font-size: calc(42px + (96 - 42) * ((100vw - 300px) / (1600 - 300)));

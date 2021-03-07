@@ -16,11 +16,6 @@ const HomepageFrame = ({ url, children, section }, ...props) => {
   const Handler = debounce(handleScroll, 180);
   const { scrollDirection, toggleScrollDirection } = useContext(ScrollContext)
 
-  // const [ isPresent, safeToRemove ] = usePresence();
-
-  // useEffect(() => {
-  //   !isPresent && setTimeout(safeToRemove, 1000);
-  // }, [isPresent]);
   return (
     <div
       className={`${section ? `homepage-${section}` : ""} homepage-section`}

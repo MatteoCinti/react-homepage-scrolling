@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { pageTransitionUp, pageTransitionDown } from '../../../utilities/framer-motion-variants';
 
 import Button from '../../buttons/link-button/link-button.component'
-import { ReactComponent as DesignAndDevelopmentLogotype } from '../../../assets/logo/design_and_development.svg'
-import { ReactComponent as Imagotype } from '../../../assets/logo/imagotype.svg'
 
 import "./homepage-contact.styles.scss";
 import { ScrollContext } from '../../../utilities/scrollContext'
@@ -22,23 +20,10 @@ const HomepageContact = ({ url }) => {
     transition="transition"
   >
     <div className="top-half-background">
-      {/* <h1 className="display-text sliding-text sliding-text-start">
-        DESIGN & DEVELOPMENT
-      </h1>
-      <h1 className="display-text sliding-text sliding-text-2">
-        DESIGN & DEVELOPMENT
-      </h1>
-      <h1 className="display-text sliding-text sliding-text-3">
-        DESIGN & DEVELOPMENT
-      </h1> */}
-      <DesignAndDevelopmentLogotype className="sliding-text" viewBox="60 55" preserveAspectRatio={true.toString()}/>
+      <h1 className="sliding-text">This is page 4. Scroll up</h1>
     </div>
     <div  className="bottom-half-background">
-      <Imagotype className="imagotype landing-contact-imagotype"/>
-      <p className="subtitle">
-        Want to make something great,
-      </p>
-      <Button section="Let 's talk"/>  
+      <Button section="Button to pillar page 4"/>  
     </div>
   </motion.div>
 )};

@@ -1,66 +1,33 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { projectData } from "../../../utilities/project-data";
-import "./homepage-projects.styles.scss";
+import { motion } from 'framer-motion';
+import { pageTransitionUp, pageTransitionDown } from '../../../utilities/framer-motion-variants';
 
-import { motion } from "framer-motion";
-import {
-  pageTransitionUp,
-  pageTransitionDown,
-} from "../../../utilities/framer-motion-variants";
+import Button from '../../buttons/link-button/link-button.component'
 
 import "./homepage-projects.styles.scss";
+import { ScrollContext } from '../../../utilities/scrollContext'
 
-import icon1 from "../../../assets/image/29k.png";
-import icon2 from "../../../assets/image/langbro.png";
-import icon3 from "../../../assets/image/Group.png";
-import { ScrollContext } from "../../../utilities/scrollContext";
-import Button from "../../buttons/link-button/link-button.component";
+const HomepageContact = ({ url }) => {
+  const { scrollDirection } = useContext(ScrollContext)
+  let pageTransition = scrollDirection === 'up' ? pageTransitionUp : pageTransitionDown
 
-function HomepageProjects({ url }) {
-  const { scrollDirection } = useContext(ScrollContext);
-  let pageTransition =
-    scrollDirection === "up" ? pageTransitionUp : pageTransitionDown;
-
-  const project = projectData.map((project) => (
-    <div key={project.id}>
-      <Link to={`/projects/${project.id}`}></Link>
-    </div>
-  ));
   return (
-    <motion.div
-      variants={pageTransition}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition="transition"
-      className="homepage-projects"
-    >
-      <div className="container-full"></div>
-      <div className="container-icon">
-        <Link to="/projects/2">
-          <div className="box-item pic1">
-            <img src={icon1} alt="" className="project-icon" />
-          </div>
-        </Link>
-        <Link to="/projects/1">
-          <div className="box-item pic2">
-            <img src={icon2} alt="" className="project-icon" />
-          </div>
-        </Link>
-        <Link to="/home/process">
-          <div className="box-item pic3">
-            <img src={icon3} alt="" className="project-icon" />
-          </div>
-        </Link>
-      </div>
-      <div className="subtitle">
-        <Button section="Know more" />
-        {/* <Link to="/home/about-us">
-        </Link> */}
-      </div>
-    </motion.div>
-  );
-}
+  <motion.div
+    variants={ pageTransition }
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    transition="transition"
+  >
+    <div className="top-half-background">
+    <div className="top-half-background">
+      <h1 className="sliding-text">This is page 3. Scroll up or down.</h1>
+    </div>
+    </div>
+    <div  className="bottom-half-background">
+      <Button section="Button to pillar page 3"/>  
+    </div>
+  </motion.div>
+)};
 
-export default HomepageProjects;
+export default HomepageContact;

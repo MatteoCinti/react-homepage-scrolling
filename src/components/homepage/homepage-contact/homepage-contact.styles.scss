@@ -29,7 +29,8 @@
       -webkit-animation: example1 15s $bezier infinite;
       -moz-animation: example1 15s $bezier infinite;
       animation: example1 15s $bezier infinite;
-      overflow: visible
+      overflow: visible;
+      white-space: nowrap;
     }
   }
   

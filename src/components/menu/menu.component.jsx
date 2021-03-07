@@ -7,9 +7,9 @@ import "./menu.styles.scss";
 const Menu = () => (
   <nav className="site-nav">
     <div className="dropdown-links">
-      <Link to="/projects">Work</Link>
-      <Link to="contact">Contact</Link>
-      <Link to="about">About Us</Link>
+      <Link to="/home/projects">Work</Link>
+      <Link to="/home/contact">Contact</Link>
+      <Link to="home/about-us">About Us</Link>
     </div>
   </nav>
 );

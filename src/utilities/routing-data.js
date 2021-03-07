@@ -9,14 +9,10 @@ const routingUrl = {
     },
     projectsUrls: {
         up: '/home/about-us',
-        down: '/home/process'
-    },
-    processUrls: {
-        up: '/home/projects',
         down: '/home/contact'
-    },  
+    },
     contactUrls: {
-        up: '/home/process',
+        up: '/home/projects',
         down: ''
     }  
 }
