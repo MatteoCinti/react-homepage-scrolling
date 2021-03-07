@@ -1,8 +1,8 @@
 ### Build Status 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ede0d9e6-26f6-424a-b789-059f64074c63/deploy-status)](https://app.netlify.com/sites/dunderdog/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f0e8bf6-f166-4ca3-ac17-62bf4aecc65c/deploy-status)](https://app.netlify.com/sites/react-homepage-scrolling/deploys)
+### Check a working snippet
 
-https://dunderdog.net
-https://dunderdog.io
+https://react-homepage-scrolling.netlify.app
 
 ### Follow below steps to run the app in your machine
 
