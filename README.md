@@ -1,16 +1,8 @@
-### Build Status - main
+### Build Status 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ede0d9e6-26f6-424a-b789-059f64074c63/deploy-status)](https://app.netlify.com/sites/dunderdog/deploys)
 
 https://dunderdog.net
 https://dunderdog.io
-
-### Build Status - test
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2e953628-768d-4935-a627-dc8821d51218/deploy-status)](https://app.netlify.com/sites/dunderdogtest/deploys)
-
-https://test.dunderdog.net
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Follow below steps to run the app in your machine
 
@@ -26,16 +18,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <br/>
 After this you will be able to access the app at http://localhost:5000
 
-### Branches
-This repository has 3 important branches
-1. **main** - Use this for production
-2. **test** - Use this for test enviroment
-3. **local** - use this for executing in your machine
-
-Once the changes are verified in `local` merge your code to `test` branch and verify the changes and then finally merge to `main`
-
-Feel free to create new branches for bug fixes, hot fixes and new feature releases.
-
 
 ## Available Scripts
 
@@ -49,10 +31,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
