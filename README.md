@@ -10,6 +10,10 @@ The button allos you to insert the name and create a direct link to the same nam
 
 https://react-homepage-scrolling.netlify.app
 
+### The project it is integrated in can be checked at
+
+https://test.dunderdog.net/
+
 ### Follow below steps to run the app in your machine
 
 `git clone https://github.com/Dunderdog/dunderdog.git`
